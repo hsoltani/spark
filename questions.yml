@@ -123,6 +123,29 @@ questions:
     required: true
     label: Worker SecurityContext RunAsUser
     group: "Spark Settings"
+- variable: worker.autoscaling.enabled
+  default: false
+  description: "Enable autoscaling depending on CPU"
+  type: boolean
+  required: true
+  label: Worker Autoscaling Enabled
+  show_subquestion_if: false
+  group: "Spark Settings" 
+  subquestions:
+    - variable: worker.autoscaling.CpuTargetPercentage
+    default: "50"
+    description: "k8s hpa cpu targetPercentage"
+    type: int
+    required: true
+    label: worker Autoscaling CpuTargetPercentage
+    group: "Spark Settings"
+   - variable: worker.autoscaling.replicasMax
+    default: "5"
+    description: "Maximum number of workers when using autoscaling"
+    type: int
+    required: true
+    label: worker Autoscaling ReplicasMax
+    group: "Spark Settings"
 - variable: persistence.enabled
   default: false
   description: "Enable persistent volume for Spark"
