@@ -65,6 +65,15 @@ questions:
   required: true
   label: Master SecurityContext RunAsUser
   group: "Spark Settings" 
+- variable: worker.debug
+  default: false
+  description: "Worker Debug"
+  type: boolean
+  required: true
+  label: Worker Debug
+  group: "Spark Settings" 
+
+
 
 - variable: persistence.enabled
   default: false
