@@ -86,6 +86,20 @@ questions:
   required: true
   label: Spark Worker Cluster Port
   group: "Spark Settings" 
+- variable: worker.replicaCount
+  default: "2"
+  description: "Set the number of workers"
+  type: int
+  required: true
+  label: Worker ReplicaCount
+  group: "Spark Settings"
+- variable: worker.autoscaling.enabled
+  default: false
+  description: "Enable autoscaling depending on CPU"
+  type: boolean
+  required: true
+  label: worker Autoscaling Enabled
+  group: "Spark Settings" 
 
 
 
