@@ -14,56 +14,46 @@ questions:
   group: "Container Images"
   subquestions:
   - variable: image.repository
-    default: "bitnami/tomcat"
-    description: "tomcat image name"
+    default: "bitnami/spark"
+    description: "Spark image name"
     type: string
-    label: tomcat Image Name
+    label: Spark Image Name
   - variable: image.tag
-    default: "9.0.34-debian-10-r13"
-    description: "tomcat image tag"
+    default: "2.4.5-debian-10-r87"
+    description: "Spark image tag"
     type: string
     label: Image Tag
-  - variable: webarchive.image.repository
-    default: "ananwaresystems/webarchive"
-    description: "webarchive image name"
-    type: string
-    label: webarchive Image Name
-  - variable: webarchive.image.tag
-    default: "1.0"
-    description: "webarchive image tag"
-    type: string
-    label: webarchive Image Tag
-- variable: tomcatDirectory
-  default: "/usr/local/tomcat/webapps"
-  description: "Path of the application"
-  type: string
+- variable: master.webPort
+  default: "8080"
+  description: "Spark container ports"
+  type: int
   required: true
-  label: Tomcat Directory
-  group: "Tomcat Settings"
+  label: Spark Web Port
+  group: "Spark Settings"
 - variable: persistence.enabled
   default: false
-  description: "Enable persistent volume for Tomcat"
+  description: "Enable persistent volume for Spark"
   type: boolean
   required: true
-  label: Tomcat Persistent Volume Enabled
+  label: Spark Persistent Volume Enabled
   show_subquestion_if: true
-  group: "Tomcat Settings"
+  group: "Spark Settings"
   subquestions:
   - variable: persistence.size
     default: "10Gi"
-    description: "Tomcat Persistent Volume Size"
+    description: "Spark Persistent Volume Size"
     type: string
-    label: Tomcat Volume Size
+    label: Spark Volume Size
   - variable: persistence.storageClass
     default: ""
     description: "If undefined or null, uses the default StorageClass. Default to null"
     type: storageclass
-    label: Default StorageClass for Tomcat
+    label: Default StorageClass for Spark
   - variable: persistence.existingClaim
     default: ""
     description: "If not empty, uses the specified existing PVC instead of creating new one"
     type: pvc
-    label: Existing Persistent Volume Claim for Tomcat
+    label: Existing Persistent Volume Claim for Spark
 - variable: ingress.enabled
   default: true
   description: "Expose app using Layer 7 Load Balancer - ingress"
@@ -80,7 +70,7 @@ questions:
     label: Hostname
 - variable: service.type
   default: "NodePort"
-  description: "Tomcat Service type"
+  description: "Spark Service type"
   type: enum
   show_if: "ingress.enabled=false"
   options:
