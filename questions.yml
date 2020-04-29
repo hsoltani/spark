@@ -30,6 +30,13 @@ questions:
   required: true
   label: Spark Web Port
   group: "Spark Settings"
+- variable: service.clusterPort
+  default: "7077"
+  description: "Spark Cluster ports"
+  type: int
+  required: true
+  label: Spark Cluster Port
+  group: "Spark Settings"
 - variable: persistence.enabled
   default: false
   description: "Enable persistent volume for Spark"
