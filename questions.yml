@@ -23,14 +23,14 @@ questions:
     description: "Spark image tag"
     type: string
     label: Image Tag
-- variable: master.service.webPort
+- variable: master.webPort
   default: "8080"
   description: "Spark container ports"
   type: int
   required: true
   label: Spark Web Port
   group: "Spark Settings"
-- variable: master.service.clusterPort
+- variable: master.clusterPort
   default: "7077"
   description: "Spark Cluster ports"
   type: int
