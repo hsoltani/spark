@@ -100,6 +100,20 @@ questions:
   required: true
   label: worker Autoscaling Enabled
   group: "Spark Settings" 
+- variable: worker.autoscaling.CpuTargetPercentage
+  default: "50"
+  description: "k8s hpa cpu targetPercentage"
+  type: int
+  required: true
+  label: worker Autoscaling CpuTargetPercentage
+  group: "Spark Settings"
+- variable: worker.autoscaling.replicasMax
+  default: "5"
+  description: "Maximum number of workers when using autoscaling"
+  type: int
+  required: true
+  label: worker Autoscaling ReplicasMax
+  group: "Spark Settings"
 
 
 
