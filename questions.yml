@@ -72,6 +72,21 @@ questions:
   required: true
   label: Worker Debug
   group: "Spark Settings" 
+- variable: worker.webPort
+  default: "8081"
+  description: "Spark worker container ports"
+  type: int
+  required: true
+  label: Spark Worker Web Port
+  group: "Spark Settings"
+- variable: worker.clusterPort
+  default: "7077"
+  description: "Spark Worker Cluster ports"
+  type: int
+  required: true
+  label: Spark Worker Cluster Port
+  group: "Spark Settings" 
+
 
 
 
