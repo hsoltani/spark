@@ -65,7 +65,6 @@ questions:
   required: true
   label: Master SecurityContext RunAsUser
   group: "Spark Settings" 
-  
 - variable: worker.debug
   default: false
   description: "Worker Debug"
@@ -136,7 +135,6 @@ questions:
   required: true
   label: Worker SecurityContext RunAsUser
   group: "Spark Settings" 
-  
 - variable: persistence.enabled
   default: false
   description: "Enable persistent volume for Spark"
