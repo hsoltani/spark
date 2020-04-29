@@ -23,20 +23,48 @@ questions:
     description: "Spark image tag"
     type: string
     label: Image Tag
+- variable: master.debug
+  default: false
+  description: "Master Debug"
+  type: boolean
+  required: true
+  label: Master Debug
+  group: "Spark Settings"   
 - variable: master.webPort
   default: "8080"
-  description: "Spark container ports"
+  description: "Spark master container ports"
   type: int
   required: true
-  label: Spark Web Port
+  label: Spark Master Web Port
   group: "Spark Settings"
 - variable: master.clusterPort
   default: "7077"
-  description: "Spark Cluster ports"
+  description: "Spark Master Cluster ports"
   type: int
   required: true
-  label: Spark Cluster Port
+  label: Spark Master Cluster Port
   group: "Spark Settings"
+- variable: master.securityContext.enabled
+  default: true
+  description: "master securityContext enabled"
+  type: boolean
+  required: true
+  label: Master SecurityContext Enabled
+  group: "Spark Settings" 
+- variable: master.securityContext.fsGroup
+  default: "1001"
+  description: "Group ID for the container"
+  type: int
+  required: true
+  label: Master SecurityContext FsGroup
+  group: "Spark Settings" 
+- variable: master.securityContext.runAsUser
+  default: "1001"
+  description: "User ID for the container"
+  type: int
+  required: true
+  label: Master SecurityContext RunAsUser
+  group: "Spark Settings" 
 - variable: persistence.enabled
   default: false
   description: "Enable persistent volume for Spark"
