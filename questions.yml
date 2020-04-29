@@ -78,7 +78,7 @@ questions:
   - "NodePort"
   - "LoadBalancer"
   required: true
-  label: Tomcat Service Type
+  label: Spark Service Type
   show_subquestion_if: "NodePort"
   group: "Services and Load Balancing"
   subquestions:
