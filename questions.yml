@@ -139,7 +139,7 @@ questions:
     required: true
     label: worker Autoscaling CpuTargetPercentage
     group: "Spark Settings"
-   - variable: worker.autoscaling.replicasMax
+  - variable: worker.autoscaling.replicasMax
     default: "5"
     description: "Maximum number of workers when using autoscaling"
     type: int
