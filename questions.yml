@@ -116,6 +116,28 @@ questions:
  # group: "Spark Settings"
 
 
+ - variable: worker.securityContext.enabled
+  default: true
+  description: "Enable security context"
+  type: boolean
+  required: true
+  label: worker SecurityContext Enabled
+  group: "Spark Settings" 
+- variable: worker.securityContext.fsGroup
+  default: "1001"
+  description: "Group ID for the container"
+  type: int
+  required: true
+  label: worker SecurityContext FsGroup
+  group: "Spark Settings"
+- variable: worker.securityContext.runAsUser
+  default: "1001"
+  description: "User ID for the container"
+  type: int
+  required: true
+  label: Worker SecurityContext RunAsUser
+  group: "Spark Settings"
+
 
 
 - variable: persistence.enabled
