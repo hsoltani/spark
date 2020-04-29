@@ -23,13 +23,13 @@ questions:
     description: "Spark image tag"
     type: string
     label: Image Tag
-#- variable: master.webPort
- # default: "8080"
- # description: "Spark container ports"
- # type: int
- # required: true
- # label: Spark Web Port
- # group: "Spark Settings"
+- variable: service.webPort
+  default: "8080"
+  description: "Spark container ports"
+  type: int
+  required: true
+  label: Spark Web Port
+  group: "Spark Settings"
 - variable: persistence.enabled
   default: false
   description: "Enable persistent volume for Spark"
