@@ -233,6 +233,20 @@ questions:
     type: hostname
     required: true
     label: Hostname
+- variable: service.webPort
+  default: 80
+  description: "service webPort"
+  type: string
+  required: true
+  label: service webPort
+  group: "Services and Load Balancing"  
+- variable: service.clusterPort
+  default: 7077
+  description: "service clusterPort"
+  type: string
+  required: true
+  label: service clusterPort
+  group: "Services and Load Balancing"  
 - variable: service.type
   default: "NodePort"
   description: "Spark Service type"
