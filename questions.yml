@@ -146,6 +146,55 @@ questions:
     required: true
     label: worker Autoscaling ReplicasMax
     group: "Spark Settings"
+- variable: security.passwordsSecretName
+  default: ""
+  description: "security passwords SecretName"
+  type: password
+  required: false
+  label: security passwords SecretName
+  group: "Security Settings"  
+- variable: security.rpc.authenticationEnabled
+  default: false
+  description: "security rpc authenticationEnabled"
+  type: boolean
+  required: true
+  label: security rpc authenticationEnabled
+  group: "Security Settings" 
+- variable: security.rpc.encryptionEnabled
+  default: false
+  description: "security rpc encryptionEnabled"
+  type: boolean
+  required: true
+  label: security rpc encryptionEnabled
+  group: "Security Settings" 
+- variable: security.storageEncryptionEnabled
+  default: false
+  description: "security storageEncryption Enabled"
+  type: boolean
+  required: true
+  label: security storageEncryption Enabled
+  group: "Security Settings"
+- variable: security.ssl.enabled
+  default: false
+  description: "security ssl enabled"
+  type: boolean
+  required: true
+  label: security ssl enabled
+  group: "Security Settings" 
+- variable: security.ssl.needClientAuth
+  default: false
+  description: "security ssl needClientAuth"
+  type: boolean
+  required: true
+  label: security ssl needClientAuth
+  group: "Security Settings"
+- variable: security.ssl.protocol
+  default: TLSv1.2
+  description: "security ssl protocol"
+  type: string
+  required: true
+  label: security ssl protocol
+  group: "Security Settings"
 - variable: persistence.enabled
   default: false
   description: "Enable persistent volume for Spark"
