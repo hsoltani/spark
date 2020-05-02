@@ -189,11 +189,32 @@ questions:
   label: security ssl needClientAuth
   group: "Security Settings"
 - variable: security.ssl.protocol
-  default: TLSv1.2
+  default: "TLSv1.2"
   description: "security ssl protocol"
   type: string
   required: true
   label: security ssl protocol
+  group: "Security Settings"
+- variable: security.ssl-key-password
+  default: ""
+  description: "ssl key password"
+  type: password
+  required: false
+  label: ssl key password
+  group: "Security Settings"
+- variable: security.ssl-keystore-password
+  default: ""
+  description: "ssl keystore password"
+  type: password
+  required: false
+  label: ssl keystore password
+  group: "Security Settings"
+- variable: security.ssl-truststore-password
+  default: ""
+  description: "ssl truststore password"
+  type: password
+  required: false
+  label: ssl truststore password
   group: "Security Settings"
 - variable: persistence.enabled
   default: false
