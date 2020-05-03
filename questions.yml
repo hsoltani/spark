@@ -195,21 +195,21 @@ questions:
   required: true
   label: security ssl protocol
   group: "Security Settings"
-- variable: security.ssl-key-password
+- variable: security.ssl.ssl-key-password
   default: ""
   description: "ssl key password"
   type: password
   required: false
   label: ssl key password
   group: "Security Settings"
-- variable: security.ssl-keystore-password
+- variable: security.ssl.ssl-keystore-password
   default: ""
   description: "ssl keystore password"
   type: password
   required: false
   label: ssl keystore password
   group: "Security Settings"
-- variable: security.ssl-truststore-password
+- variable: security.ssl.ssl-truststore-password
   default: ""
   description: "ssl truststore password"
   type: password
